@@ -8,6 +8,8 @@ import android.view.MenuItem;
 
 public class MainActivity extends ActionBarActivity {
 
+	public static final String DEBUGTAG = "AABB";
+	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -4,5 +4,12 @@
     <string name="app_name">PasswordVault</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_password_vault">Password Vault</string>
+    <string name="password_image">Password Image</string>
+    <string name="toast_display_after_point_touched">Recognized a point touch on the screen</string>
+    <string name="storing_pass_points">Storing Pass points</string>
+    <string name="title_activity_pass_save_and_retrieve">PassSaveAndRetrieveActivity</string>
+    <string name="save_password">Save Password</string>
+    <string name="retrieve_password">Retrieve Password</string>
 
 </resources>
