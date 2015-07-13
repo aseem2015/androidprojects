@@ -27,7 +27,7 @@ public class PassSaveAndRetrieveActivity extends ActionBarActivity {
 
 			@Override
 			public void onClick(View v) {
-				Log.d(TAG, "Retreiving password - about to fire intent");
+				Log.d(TAG, "Retreiving password - about to fire intent..");
 				Intent i = new Intent(PassSaveAndRetrieveActivity.this,
 						RetreivePassword.class);
 				startActivity(i);
