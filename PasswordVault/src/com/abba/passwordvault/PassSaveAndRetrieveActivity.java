@@ -1,16 +1,55 @@
 package com.abba.passwordvault;
 
-import android.support.v7.app.ActionBarActivity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 public class PassSaveAndRetrieveActivity extends ActionBarActivity {
+	
+	public final static String TAG = PassSaveAndRetrieveActivity.class.getName();
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_pass_save_and_retrieve);
+		savePaswordListener();
+		retrivePasswordListener();
+	}
+
+	private void retrivePasswordListener() {
+		Button rtvBtn = (Button) findViewById(R.id.retreivePassword);
+		rtvBtn.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				Log.d(TAG, "Retreiving password - about to fire intent");
+				Intent i = new Intent(PassSaveAndRetrieveActivity.this,
+						RetreivePassword.class);
+				startActivity(i);
+			}
+		});
+
+	}
+
+	private void savePaswordListener() {
+		Button savBtn = (Button) findViewById(R.id.savePassword);
+		savBtn.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				Log.d(TAG, "Saving password -about to fire intent");
+				Intent i = new Intent(PassSaveAndRetrieveActivity.this,
+						SavePassword.class);
+				startActivity(i);
+			}
+		});
+
+		
 	}
 
 	@Override
