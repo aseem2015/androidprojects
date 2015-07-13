@@ -11,5 +11,15 @@
     <string name="title_activity_pass_save_and_retrieve">PassSaveAndRetrieveActivity</string>
     <string name="save_password">Save Password</string>
     <string name="retrieve_password">Retrieve Password</string>
+    <string name="title_activity_retreive_password">RetreivePassword</string>
+    <string name="title_activity_save_password">SavePassword</string>
+    <string name="site_name">Site Name :</string>
+    <string name="submit">Submit</string>
+    <string name="enter_your_site_name">Enter your site name</string>
+    <string name="lock">LOCK</string>
+    <string name="password">Password</string>
+    <string name="description">Description</string>
+    <string name="enter_site_keyword">Enter site keyword</string>
+    <string name="store_password">Storing Password</string>
 
 </resources>

@@ -5,8 +5,13 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 public class VaultDatabase extends SQLiteOpenHelper {
+	
+	public final static String TAG = VaultDatabase.class.getName();
+
+
 	private static final String PASSWORD_TABLE = "VAULTPWD";
 	private static final String COL_ID = "ID";
 	private static final String COL_NAME = "NAME";
@@ -14,7 +19,8 @@ public class VaultDatabase extends SQLiteOpenHelper {
 	private static final String COL_DESCRIPTION = "DESCRIPTION";
 
 	public VaultDatabase(Context context) {
-		super(context, "password.db", null, 1);
+		super(context, "sitepassword.db", null, 1);
+		Log.d(TAG,"cREATED DATABASE ...");
 	}
 
 	@Override
@@ -32,7 +38,7 @@ public class VaultDatabase extends SQLiteOpenHelper {
 	public void storePasswordData(VaultData data) {
 		SQLiteDatabase db = getWritableDatabase();
 
-
+		Log.d(TAG, " about to store data: " + data.toString());
 		ContentValues values = new ContentValues();
 		values.put(COL_NAME, data.getName());
 		values.put(COL_PASSWORD, data.getPassword());
@@ -44,7 +50,7 @@ public class VaultDatabase extends SQLiteOpenHelper {
 
 	public String getPassword(String site) {
 		
-		String result = "unknown";
+		String result = "ERROR NO RECORDS!!";
 		SQLiteDatabase db = getReadableDatabase();
 
 		String sql = String.format("SELECT %s, %s FROM %s WHERE COL_NAME = %s", 
