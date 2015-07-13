@@ -10,12 +10,14 @@
     tools:context="com.abba.passwordvault.PassSaveAndRetrieveActivity" >
 
     <Button
+        android:id="@+id/savePassword"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:text="@string/save_password" />
 
     <Button
+        android:id="@+id/retreivePassword"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
